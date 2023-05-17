@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/toann/Downloads/Robotics/ROB502_RP/hw4/build/CMakeFiles /home/toann/Downloads/Robotics/ROB502_RP/hw4/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/toann/Downloads/Robotics/ROB502_RP/hw4/build/CMakeFiles /home/toann/Downloads/Robotics/ROB502_RP/hw4/build/network/CMakeFiles/progress.marks
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f CMakeFiles/Makefile2 network/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/toann/Downloads/Robotics/ROB502_RP/hw4/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f CMakeFiles/Makefile2 network/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,97 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f CMakeFiles/Makefile2 network/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f CMakeFiles/Makefile2 network/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named test
+# Convenience name for target.
+network/CMakeFiles/network.dir/rule:
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f CMakeFiles/Makefile2 network/CMakeFiles/network.dir/rule
+.PHONY : network/CMakeFiles/network.dir/rule
 
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test
-.PHONY : test
+# Convenience name for target.
+network: network/CMakeFiles/network.dir/rule
 
-# fast build rule for target.
-test/fast:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-#=============================================================================
-# Target rules for targets named ransac
-
-# Build rule for target.
-ransac: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ransac
-.PHONY : ransac
-
-# fast build rule for target.
-ransac/fast:
-	$(MAKE) -f ransac/CMakeFiles/ransac.dir/build.make ransac/CMakeFiles/ransac.dir/build
-.PHONY : ransac/fast
-
-#=============================================================================
-# Target rules for targets named forward_kinematic
-
-# Build rule for target.
-forward_kinematic: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 forward_kinematic
-.PHONY : forward_kinematic
-
-# fast build rule for target.
-forward_kinematic/fast:
-	$(MAKE) -f fk/CMakeFiles/forward_kinematic.dir/build.make fk/CMakeFiles/forward_kinematic.dir/build
-.PHONY : forward_kinematic/fast
-
-#=============================================================================
-# Target rules for targets named network
-
-# Build rule for target.
-network: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 network
 .PHONY : network
 
 # fast build rule for target.
 network/fast:
-	$(MAKE) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/build
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/build
 .PHONY : network/fast
 
-test.o: test.cpp.o
+network.o: network.cpp.o
 
-.PHONY : test.o
+.PHONY : network.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
-.PHONY : test.cpp.o
+network.cpp.o:
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/network.cpp.o
+.PHONY : network.cpp.o
 
-test.i: test.cpp.i
+network.i: network.cpp.i
 
-.PHONY : test.i
+.PHONY : network.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
-.PHONY : test.cpp.i
+network.cpp.i:
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/network.cpp.i
+.PHONY : network.cpp.i
 
-test.s: test.cpp.s
+network.s: network.cpp.s
 
-.PHONY : test.s
+.PHONY : network.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
-.PHONY : test.cpp.s
+network.cpp.s:
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(MAKE) -f network/CMakeFiles/network.dir/build.make network/CMakeFiles/network.dir/network.cpp.s
+.PHONY : network.cpp.s
 
 # Help Target
 help:
@@ -197,13 +160,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... test"
-	@echo "... ransac"
-	@echo "... forward_kinematic"
 	@echo "... network"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... network.o"
+	@echo "... network.i"
+	@echo "... network.s"
 .PHONY : help
 
 
@@ -215,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/toann/Downloads/Robotics/ROB502_RP/hw4/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

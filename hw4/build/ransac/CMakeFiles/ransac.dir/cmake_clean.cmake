@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "../../results/ransac"
-  "../../results/ransac.pdb"
+  "../../results/ransac/ransac"
+  "../../results/ransac/ransac.pdb"
   "CMakeFiles/ransac.dir/ransac.cpp.o"
 )
 

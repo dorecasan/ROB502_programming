@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/ransac.dir/ransac.cpp.o  -o ../../results/ransac 
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/ransac.dir/ransac.cpp.o  -o ../../results/ransac/ransac 

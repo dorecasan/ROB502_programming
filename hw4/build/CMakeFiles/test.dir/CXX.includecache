@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/toann/Downloads/Robotics/ROB502_RP/hw4/test.cpp
+iostream
+-
+eigen3/Eigen/Eigen
+-
+

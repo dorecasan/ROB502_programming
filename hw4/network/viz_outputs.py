@@ -16,10 +16,10 @@ def plot_example(ax, true_i, image_flat, class_probabilities):
 
 def main():
     input_filenames = [
-        "network/data1.csv",
-        "network/data2.csv",
-        "network/data3.csv",
-        "network/data4.csv",
+        "data1.csv",
+        "data2.csv",
+        "data3.csv",
+        "data4.csv",
     ]
 
     def _parse_data_file(filename):
@@ -28,8 +28,9 @@ def main():
             true_class = int(lines[-1])
         img = np.loadtxt(filename)[2:-1]  # skip first 2 and last 1
         return true_class, img
+    
     inputs = [_parse_data_file(filename) for filename in input_filenames]
-    outputs = np.loadtxt("network/output.csv", delimiter=',')
+    outputs = np.loadtxt("output.csv", delimiter=',')
     fig, ax = plt.subplots(2, 2)
     plot_example(ax[0, 0], *inputs[0], outputs[0])
     plot_example(ax[0, 1], *inputs[1], outputs[1])

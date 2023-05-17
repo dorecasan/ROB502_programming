@@ -6,9 +6,11 @@
 Eigen::Matrix3d transform_mat(double q, double l)
 {
     // --- Your code here
-
-
-
+    Eigen::Matrix3d transformation_matrix;
+    transformation_matrix << std::cos(q), -std::sin(q), l*std::cos(q),
+                             std::sin(q), std::cos(q), l*std::sin(q),
+                             0,0,1;
+    return transformation_matrix;
     // ---
 }
 
@@ -36,9 +38,15 @@ int main(int argc, char* argv[])
         ifs >> q1 >> q2 >> q3;
 
         // --- Your code here
+        Eigen::Matrix3d T1 = transform_mat(q1,l1);
+        Eigen::Matrix3d T2 = transform_mat(q2,l2);
+        Eigen::Matrix3d T3 = transform_mat(q3,l3);
 
+        Eigen::Matrix3d T = T1*T2*T3;
 
-
+        std::cout << "Transformation matrix for q1 = "<<q1<<", q2 = " <<q2<<", q3 = "<<q3<<":\n";
+        std::cout << std::setprecision(3) << T <<std::endl; 
         // ---
     }
+    return 0;
 }

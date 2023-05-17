@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/toann/Downloads/Robotics/ROB502_RP/hw4/network/network.cpp
+chrono
+-
+iomanip
+-
+iostream
+-
+fstream
+-
+eigen3/Eigen/Eigen
+-
+

@@ -16,3 +16,7 @@ endif()
 include_directories(${EIGEN3_INCLUDE_DIR})
 
 add_subdirectory(ransac)
+add_subdirectory(fk)
+add_subdirectory(network)
+
+add_executable(test test.cpp)
