@@ -1,0 +1,1 @@
+add_executable(ransac ransac.cpp)

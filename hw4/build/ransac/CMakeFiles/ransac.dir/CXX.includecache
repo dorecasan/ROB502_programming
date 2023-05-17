@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/toann/Downloads/Robotics/ROB502_RP/hw4/ransac/ransac.cpp
+iostream
+-
+chrono
+-
+random
+-
+eigen3/Eigen/Eigen
+-
+fstream
+-
+iomanip
+-
+ransac.h
+/home/toann/Downloads/Robotics/ROB502_RP/hw4/ransac/ransac.h
+
+/home/toann/Downloads/Robotics/ROB502_RP/hw4/ransac/ransac.h
+random
+-
+iomanip
+-
+iostream
+-
+eigen3/Eigen/Eigen
+-
+vector
+-
+
